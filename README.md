@@ -1,9 +1,8 @@
 <div align="center">
 
+<img src="assets/banner.png" alt="Agrinexa AI — Smarter Farms. Better Futures." width="100%" />
 
-# 🌱 Agrinexa AI
-
-### Smarter Farms. Better Futures.
+<br />
 
 **An AI-Powered Climate-Smart Farming Decision Support System for Sustainable Agriculture**
 
