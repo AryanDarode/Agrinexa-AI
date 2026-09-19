@@ -1,6 +1,5 @@
 <div align="center">
 
-<img src="assets/logo.png" alt="Agrinexa AI logo" width="130" />
 
 # 🌱 Agrinexa AI
 
