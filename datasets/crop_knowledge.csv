@@ -1,0 +1,95 @@
+Crop,Sowing_Start,Sowing_End,Growth_Duration_Days,Stage,Start_Day,End_Day,Stage_Action
+Rice,June,July,120,Sowing,0,0,Sow when soil moisture and weather conditions are suitable.
+Rice,June,July,120,Establishment,1,20,"Monitor germination, water conditions and early weed growth."
+Rice,June,July,120,Vegetative Growth,21,50,"Monitor crop growth, nutrients and weeds."
+Rice,June,July,120,Flowering,51,75,Monitor water availability and crop health.
+Rice,June,July,120,Grain Filling,76,100,Monitor moisture and grain development.
+Rice,June,July,120,Maturity,101,120,Monitor maturity and prepare for harvest.
+Wheat,October,December,120,Sowing,0,0,Sow when soil and weather conditions are suitable.
+Wheat,October,December,120,Establishment,1,20,Monitor germination and early weed growth.
+Wheat,October,December,120,Vegetative Growth,21,55,"Monitor crop growth, nutrients and moisture."
+Wheat,October,December,120,Flowering,56,80,Monitor crop health and moisture.
+Wheat,October,December,120,Grain Filling,81,105,Monitor grain development and crop moisture.
+Wheat,October,December,120,Maturity,106,120,Monitor maturity and prepare for harvest.
+Maize,June,July,120,Sowing,0,0,Sow when soil and weather conditions are suitable.
+Maize,June,July,120,Early Growth,1,20,"Monitor germination, soil moisture and early weed growth."
+Maize,June,July,120,Vegetative Growth,21,40,Monitor crop growth and nutrient requirements.
+Maize,June,July,120,Flowering,41,60,"Monitor moisture, nutrient status and pest risk."
+Maize,June,July,120,Grain Development,61,90,Maintain appropriate soil moisture and monitor crop health.
+Maize,June,July,120,Maturity,91,120,Monitor crop maturity and prepare for harvesting.
+Chickpea,October,November,120,Sowing,0,0,Sow when soil and weather conditions are suitable.
+Chickpea,October,November,120,Establishment,1,20,Monitor germination and soil moisture.
+Chickpea,October,November,120,Vegetative Growth,21,45,Monitor crop growth and nutrient status.
+Chickpea,October,November,120,Flowering,46,70,Monitor flowering and moisture conditions.
+Chickpea,October,November,120,Pod Development,71,100,Monitor pod development and pest risk.
+Chickpea,October,November,120,Maturity,101,120,Monitor maturity and prepare for harvest.
+Pigeon Pea,June,July,150,Sowing,0,0,Sow when rainfall and soil conditions are suitable.
+Pigeon Pea,June,July,150,Establishment,1,25,Monitor germination and plant population.
+Pigeon Pea,June,July,150,Vegetative Growth,26,60,"Monitor growth, weeds and nutrient status."
+Pigeon Pea,June,July,150,Flowering,61,100,"Monitor flowering, moisture and pest risk."
+Pigeon Pea,June,July,150,Pod Development,101,130,Monitor pod development and crop health.
+Pigeon Pea,June,July,150,Maturity,131,150,Monitor maturity and prepare for harvest.
+Green Gram,June,July,70,Sowing,0,0,Sow when soil moisture and weather conditions are suitable.
+Green Gram,June,July,70,Establishment,1,15,Monitor germination and early growth.
+Green Gram,June,July,70,Vegetative Growth,16,30,Monitor growth and weed pressure.
+Green Gram,June,July,70,Flowering,31,45,Monitor flowering and moisture.
+Green Gram,June,July,70,Pod Development,46,60,Monitor pods and pest risk.
+Green Gram,June,July,70,Maturity,61,70,Monitor maturity and prepare for harvest.
+Black Gram,June,July,75,Sowing,0,0,Sow when soil moisture and weather conditions are suitable.
+Black Gram,June,July,75,Establishment,1,15,Monitor germination and plant establishment.
+Black Gram,June,July,75,Vegetative Growth,16,30,Monitor growth and weed pressure.
+Black Gram,June,July,75,Flowering,31,45,Monitor flowering and moisture.
+Black Gram,June,July,75,Pod Development,46,60,Monitor pods and pest risk.
+Black Gram,June,July,75,Maturity,61,75,Monitor maturity and prepare for harvest.
+Soybean,June,July,100,Sowing,0,0,Sow after suitable rainfall and soil moisture conditions.
+Soybean,June,July,100,Establishment,1,20,Monitor germination and plant population.
+Soybean,June,July,100,Vegetative Growth,21,40,"Monitor growth, weeds and soil moisture."
+Soybean,June,July,100,Flowering,41,60,Monitor flowering and pest risk.
+Soybean,June,July,100,Pod Development,61,80,Monitor pod formation and crop health.
+Soybean,June,July,100,Maturity,81,100,Monitor maturity and prepare for harvest.
+Cotton,June,July,160,Sowing,0,0,Sow when soil moisture and weather conditions are suitable.
+Cotton,June,July,160,Establishment,1,25,Monitor germination and early plant growth.
+Cotton,June,July,160,Vegetative Growth,26,60,"Monitor growth, weeds and nutrient status."
+Cotton,June,July,160,Flowering,61,90,"Monitor flowering, moisture and pest risk."
+Cotton,June,July,160,Boll Development,91,130,Monitor boll development and crop health.
+Cotton,June,July,160,Maturity,131,160,Monitor boll opening and harvest readiness.
+Sorghum,June,July,110,Sowing,0,0,Sow when rainfall and soil conditions are suitable.
+Sorghum,June,July,110,Establishment,1,20,Monitor germination and plant population.
+Sorghum,June,July,110,Vegetative Growth,21,45,"Monitor growth, weeds and moisture."
+Sorghum,June,July,110,Flowering,46,70,Monitor flowering and crop health.
+Sorghum,June,July,110,Grain Development,71,90,Monitor grain development and moisture.
+Sorghum,June,July,110,Maturity,91,110,Monitor maturity and prepare for harvest.
+Pearl Millet,June,July,90,Sowing,0,0,Sow when rainfall and soil conditions are suitable.
+Pearl Millet,June,July,90,Establishment,1,15,Monitor germination and early growth.
+Pearl Millet,June,July,90,Vegetative Growth,16,35,Monitor growth and nutrient status.
+Pearl Millet,June,July,90,Flowering,36,55,Monitor flowering and moisture.
+Pearl Millet,June,July,90,Grain Development,56,75,Monitor grain development and crop health.
+Pearl Millet,June,July,90,Maturity,76,90,Monitor maturity and prepare for harvest.
+Groundnut,June,July,110,Sowing,0,0,Sow when soil moisture and weather conditions are suitable.
+Groundnut,June,July,110,Establishment,1,20,Monitor germination and plant establishment.
+Groundnut,June,July,110,Vegetative Growth,21,40,"Monitor growth, weeds and moisture."
+Groundnut,June,July,110,Flowering,41,60,Monitor flowering and crop health.
+Groundnut,June,July,110,Pod Development,61,90,Monitor pod development and moisture.
+Groundnut,June,July,110,Maturity,91,110,Monitor maturity and prepare for harvest.
+Sugarcane,Year-round,Year-round,365,Planting,0,0,Plant healthy setts under suitable soil and weather conditions.
+Sugarcane,Year-round,Year-round,365,Germination,1,45,"Monitor germination, moisture and early weed growth."
+Sugarcane,Year-round,Year-round,365,Tillering,46,120,"Monitor tillering, nutrients and moisture."
+Sugarcane,Year-round,Year-round,365,Grand Growth,121,270,"Monitor crop growth, water and nutrient requirements."
+Sugarcane,Year-round,Year-round,365,Maturity,271,365,Monitor maturity and prepare for harvesting.
+Sunflower,June,July,100,Sowing,0,0,Sow under suitable soil moisture and weather conditions.
+Sunflower,June,July,100,Establishment,1,20,Monitor germination and early growth.
+Sunflower,June,July,100,Vegetative Growth,21,40,Monitor plant growth and nutrient status.
+Sunflower,June,July,100,Flowering,41,60,Monitor flowering and moisture.
+Sunflower,June,July,100,Seed Development,61,80,Monitor seed development and crop health.
+Sunflower,June,July,100,Maturity,81,100,Monitor maturity and prepare for harvest.
+Onion,Season-dependent,Season-dependent,120,Nursery / Planting,0,0,Establish healthy seedlings under suitable conditions.
+Onion,Season-dependent,Season-dependent,120,Establishment,1,25,Monitor seedling establishment and moisture.
+Onion,Season-dependent,Season-dependent,120,Bulb Development,26,75,"Monitor bulb development, nutrients and moisture."
+Onion,Season-dependent,Season-dependent,120,Bulb Enlargement,76,100,Monitor bulb growth and crop health.
+Onion,Season-dependent,Season-dependent,120,Maturity,101,120,Monitor maturity and prepare for harvest.
+Chilli,Season-dependent,Season-dependent,150,Nursery / Planting,0,0,Establish healthy seedlings under suitable conditions.
+Chilli,Season-dependent,Season-dependent,150,Establishment,1,30,Monitor seedling establishment and moisture.
+Chilli,Season-dependent,Season-dependent,150,Vegetative Growth,31,60,Monitor plant growth and nutrient status.
+Chilli,Season-dependent,Season-dependent,150,Flowering,61,90,Monitor flowering and pest risk.
+Chilli,Season-dependent,Season-dependent,150,Fruit Development,91,130,Monitor fruit development and crop health.
+Chilli,Season-dependent,Season-dependent,150,Maturity,131,150,Monitor fruit maturity and harvesting.

@@ -1,0 +1,242 @@
+/* ==========================================================================
+   AGRINEXA AI — DESIGN SYSTEM TOKENS & BASE STYLES
+   ========================================================================== */
+
+:root {
+  /* ------------------------------------------------------------------------
+     1. COLOR PALETTE TOKENS
+     ------------------------------------------------------------------------ */
+  --canvas: #FAFAF7;
+  --surface: #FFFFFF;
+  --surface-sunk: #F3F1EA;
+  --surface-elevated: #FFFFFF;
+
+  /* Primary Agrinexa Greens */
+  --green-900: #0F3D2E;
+  --green-700: #16704A;
+  --green-600: #1C8256;
+  --green-500: #2E9B6B;
+  --green-200: #C2E2CF;
+  --green-100: #E4F0E8;
+  --green-50:  #F2F8F4;
+
+  /* Earth Neutrals */
+  --earth-100: #F7F4EE;
+  --earth-200: #EDE6D9;
+  --earth-300: #DCD3C1;
+  --earth-400: #C9BCA5;
+
+  /* Text & Border */
+  --text-1: #10190F;
+  --text-2: #5B6B5F;
+  --text-3: #8B978D;
+  --text-inverse: #FFFFFF;
+  --border: #E7E4DC;
+  --border-subtle: #EFECE5;
+  --border-focus: #16704A;
+
+  /* Contextual Status Colors */
+  --water: #1F6FB2;
+  --water-bg: #EAF3FB;
+  --water-border: #BCD9F1;
+
+  --warn: #B4690E;
+  --warn-bg: #FEF7EE;
+  --warn-border: #F7D7AC;
+
+  --danger: #A4271F;
+  --danger-bg: #FDF2F2;
+  --danger-border: #F5C6C4;
+
+  --good: #16704A;
+  --good-bg: #EBF7F0;
+  --good-border: #B7E2C7;
+
+  /* ------------------------------------------------------------------------
+     2. TYPOGRAPHY
+     ------------------------------------------------------------------------ */
+  --font-latin: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-devanagari: 'Noto Sans Devanagari', 'Inter', sans-serif;
+  --font-family: var(--font-latin);
+
+  --line-height-normal: 1.5;
+  --line-height-devanagari: 1.65;
+  --line-height-heading: 1.25;
+
+  /* Scale */
+  --text-xs: 12px;
+  --text-sm: 14px;
+  --text-base: 16px;
+  --text-md: 18px;
+  --text-lg: 22px;
+  --text-xl: 28px;
+  --text-hero: 34px;
+
+  /* ------------------------------------------------------------------------
+     3. SPACING & SIZING (4px Base Grid)
+     ------------------------------------------------------------------------ */
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 20px;
+  --space-6: 24px;
+  --space-8: 32px;
+  --space-10: 40px;
+  --space-14: 56px;
+
+  --gutter-mobile: 16px;
+  --gutter-tablet: 24px;
+  --gutter-desktop: 32px;
+
+  --tap-target-min: 48px;
+
+  /* ------------------------------------------------------------------------
+     4. RADIUS & ELEVATION
+     ------------------------------------------------------------------------ */
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --radius-full: 999px;
+
+  --shadow-1: 0 1px 2px rgba(16, 25, 15, 0.05), 0 1px 1px rgba(16, 25, 15, 0.03);
+  --shadow-2: 0 8px 24px rgba(16, 25, 15, 0.08), 0 2px 6px rgba(16, 25, 15, 0.04);
+  --shadow-modal: 0 20px 48px rgba(16, 25, 15, 0.16), 0 6px 16px rgba(16, 25, 15, 0.06);
+
+  /* ------------------------------------------------------------------------
+     5. TRANSITIONS & ANIMATIONS
+     ------------------------------------------------------------------------ */
+  --ease-spring: cubic-bezier(0.2, 0, 0, 1);
+  --duration-fast: 160ms;
+  --duration-normal: 240ms;
+
+  --transition-default: all var(--duration-fast) var(--ease-spring);
+  --transition-color: color var(--duration-fast) var(--ease-spring), background-color var(--duration-fast) var(--ease-spring), border-color var(--duration-fast) var(--ease-spring);
+}
+
+/* --------------------------------------------------------------------------
+   GLOBAL RESET & DEVANAGARI RULES
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  background-color: var(--canvas);
+  color: var(--text-1);
+  font-family: var(--font-family);
+  line-height: var(--line-height-normal);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  background-color: var(--canvas);
+  color: var(--text-1);
+  overflow-x: hidden;
+}
+
+/* Devanagari specific font scaling & line-height rules */
+[lang="hi"], [lang="mr"], [data-lang="hi"], [data-lang="mr"] {
+  font-family: var(--font-devanagari);
+  line-height: var(--line-height-devanagari);
+}
+
+[lang="hi"] body, [lang="mr"] body,
+[data-lang="hi"] body, [data-lang="mr"] body {
+  font-size: 16px;
+}
+
+/* Accessibility Focus Ring */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   ACCESSIBLE BUTTON & LINK RESETS
+   -------------------------------------------------------------------------- */
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  background: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  user-select: none;
+  touch-action: manipulation;
+  transition: var(--transition-default);
+}
+
+button:active {
+  transform: scale(0.98);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+  transform: none;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* --------------------------------------------------------------------------
+   SHIMMER SKELETON ANIMATION
+   -------------------------------------------------------------------------- */
+@keyframes ag-shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.ag-skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--surface-sunk) 25%,
+    var(--earth-100) 50%,
+    var(--surface-sunk) 75%
+  );
+  background-size: 200% 100%;
+  animation: ag-shimmer 1.6s infinite ease-in-out;
+  border-radius: var(--radius-sm);
+  display: inline-block;
+}
+
+/* --------------------------------------------------------------------------
+   PREFERS-REDUCED-MOTION
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .ag-skeleton {
+    animation: none;
+    background: var(--surface-sunk);
+  }
+
+  button:active {
+    transform: none;
+  }
+}

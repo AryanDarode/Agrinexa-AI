@@ -1,0 +1,140 @@
+def complete_farmer_action_plan(
+    district,
+    crop,
+    sowing_date,
+    area,
+    temperature,
+    humidity,
+    rainfall,
+    wind_speed,
+    solar_radiation,
+    year=2026
+):
+
+    # ======================================
+    # 1. CROP STAGE
+    # ======================================
+
+    stage = farmer_action_plan(
+        crop=crop,
+        sowing_date=sowing_date
+    )
+
+    if "Current_Stage" not in stage:
+        return stage
+
+    current_stage = stage["Current_Stage"]
+
+
+    # ======================================
+    # 2. FERTILIZER + SOIL
+    # ======================================
+
+    fertilizer = location_based_fertilizer(
+        district=district,
+        crop=crop
+    )
+
+    if fertilizer is None:
+        return {
+            "Status": "Error",
+            "Message": "Soil information is not available for this district."
+        }
+
+    # Get estimated soil pH
+    ph = float(fertilizer["pH"])
+
+
+    # ======================================
+    # 3. IRRIGATION
+    # ======================================
+
+    irrigation = irrigation_recommendation(
+        crop=crop,
+        crop_stage=current_stage,
+        rainfall=rainfall,
+        temperature=temperature,
+        humidity=humidity
+    )
+
+
+    # ======================================
+    # 4. PEST / DISEASE
+    # ======================================
+
+    pest = pest_disease_advisory(
+        crop=crop,
+        crop_stage=current_stage,
+        temperature=temperature,
+        humidity=humidity,
+        rainfall=rainfall
+    )
+
+
+    # ======================================
+    # 5. YIELD PREDICTION
+    # ======================================
+
+    try:
+
+        yield_result = predict_yield(
+            crop=crop,
+            area=area,
+            temperature=temperature,
+            humidity=humidity,
+            ph=ph,
+            rainfall=rainfall,
+            wind_speed=wind_speed,
+            solar_radiation=solar_radiation,
+            year=year
+        )
+
+    except ValueError as e:
+
+        if "Unsupported crop" in str(e):
+
+            yield_result = {
+                "Status": "Not Available",
+                "Message": f"Yield prediction is currently unavailable for {crop}.",
+                "Supported_Crops": [
+                    "Rice",
+                    "Maize",
+                    "Chickpea",
+                    "Cotton"
+                ]
+            }
+
+        else:
+            raise
+
+
+    # ======================================
+    # 6. FINAL AGRINEXA RESULT
+    # ======================================
+
+    return {
+
+        "District": district,
+
+        "Crop": crop,
+
+        "Area": area,
+
+        "Sowing_Date": sowing_date,
+
+        "Crop_Age_Days": stage["Crop_Age_Days"],
+
+        "Current_Stage": stage["Current_Stage"],
+
+        "Current_Action": stage["Current_Action"],
+
+        "Next_Stage": stage["Next_Stage"],
+
+        "Fertilizer": fertilizer,
+
+        "Irrigation": irrigation,
+
+        "Pest_Disease": pest,
+
+        "Yield": yield_result
+    }
